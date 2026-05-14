@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Прогресс — EGE English Tutor</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body class="progress-page">
+
+  <header class="main-header">
+    <nav class="main-nav">
+      <a class="logo" href="index.html">EGE English Tutor</a>
+
+      <div class="nav-links">
+        <a href="index.html">Главная</a>
+        <a href="training.html">Обучение</a>
+        <a href="progress.html" class="active-link">Прогресс</a>
+        <a href="about.html">О проекте</a>
+      </div>
+    </nav>
+  </header>
+
+  <main class="progress-main">
+    <section class="progress-hero">
+      <span class="hero-label">Личный результат</span>
+
+      <h1>Твой прогресс в подготовке к ЕГЭ 19–29</h1>
+
+      <p>
+        Здесь сохраняются результаты тренировки, экзаменационный балл
+        и темы, в которых чаще всего возникают ошибки.
+      </p>
+    </section>
+
+    <section class="progress-dashboard">
+      <div class="stats-grid">
+        <article class="big-stat-card">
+          <span>Решено заданий</span>
+          <strong id="progress-total">0</strong>
+        </article>
+
+        <article class="big-stat-card">
+          <span>Верных ответов</span>
+          <strong id="progress-correct">0</strong>
+        </article>
+
+        <article class="big-stat-card">
+          <span>Ошибок</span>
+          <strong id="progress-wrong">0</strong>
+        </article>
+
+        <article class="big-stat-card">
+          <span>Точность</span>
+          <strong id="progress-accuracy">0%</strong>
+        </article>
+      </div>
+    </section>
+
+    <section class="progress-columns">
+      <div class="progress-panel">
+        <h2>Экзамен ЕГЭ 19–29</h2>
+
+        <div class="exam-results-grid">
+          <div class="result-mini-card">
+            <span>Последний результат</span>
+            <strong id="progress-last-exam">—</strong>
+          </div>
+
+          <div class="result-mini-card">
+            <span>Лучший результат</span>
+            <strong id="progress-best-exam">—</strong>
+          </div>
+        </div>
+
+        <p class="panel-note">
+          Экзаменационный режим показывает, насколько уверенно ученик
+          справляется без подсказок и разбора во время решения.
+        </p>
+
+        <a href="training.html" class="btn hero-main-btn">
+          Перейти к тренировке
+        </a>
+      </div>
+
+      <div class="progress-panel">
+        <h2>Слабая тема</h2>
+
+        <div id="weak-topic-progress" class="weak-topic-display">
+          Пока данных недостаточно. Реши несколько заданий с проверкой,
+          чтобы сайт смог определить проблемную тему.
+        </div>
+
+        <p class="panel-note">
+          Сайт анализирует, в каких подтемах чаще всего появляются ошибки,
+          и показывает их отдельно.
+        </p>
+      </div>
+    </section>
+
+    <section class="progress-panel recommendations-panel">
+      <h2>Рекомендация по обучению</h2>
+
+      <div id="learning-recommendation" class="learning-recommendation">
+        Начни с лёгкого уровня, затем переходи к среднему и сложному.
+        После этого проверь себя в экзаменационном режиме.
+      </div>
+    </section>
+  </main>
+
+  <footer class="main-footer">
+    <p>
+      Индивидуальный проект: обучающий сайт для подготовки к заданиям
+      19–29 ЕГЭ по английскому языку
+    </p>
+  </footer>
+
+  <script src="progress.js"></script>
+</body>
+</html>

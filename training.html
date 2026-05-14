@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>EGE English Tutor</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body class="training-page">
+
+</body>
+  <header class="main-header">
+  <nav class="main-nav">
+    <a class="logo" href="index.html">EGE English Tutor</a>
+
+    <div class="nav-links">
+      <a href="index.html">Главная</a>
+      <a href="training.html" class="active-link">Обучение</a>
+      <a href="progress.html">Прогресс</a>
+      <a href="about.html">О проекте</a>
+    </div>
+  </nav>
+</header>
+
+<section class="training-hero">
+  <span class="hero-label">Интерактивная подготовка</span>
+
+  <h1>Обучение по заданиям 19–29 ЕГЭ</h1>
+
+  <p>
+    Выбери модуль, изучи теорию, посмотри разобранный пример,
+    выполни пробное задание и получи объяснение ошибки.
+  </p>
+</section>
+    
+
+  <main>
+    
+<section class="section" id="practice">
+  <h2>Обучающие модули ЕГЭ</h2>
+
+  <div class="module-layout">
+    <aside class="module-menu">
+      <button onclick="selectModule('grammarForms')" class="module-btn active">
+        ЕГЭ 19–24<br>
+        <small>Grammar Forms</small>
+      </button>
+
+      <button onclick="selectModule('wordFormation')" class="module-btn">
+        ЕГЭ 25–29<br>
+        <small>Word Formation</small>
+      </button>
+
+      <button onclick="selectModule('mixed')" class="module-btn">
+        Смешанная практика<br>
+        <small>19–29</small>
+      </button>
+
+      <hr class="menu-line">
+
+      <button class="module-btn exam-menu-btn" onclick="startExamMode()">
+        Начать экзамен<br>
+        <small>ЕГЭ 19–29</small>
+      </button>
+
+      <div id="timer-box"></div>
+    </aside>
+
+    <div class="module-content">
+      <div id="module-info"></div>
+
+      <div class="difficulty-box">
+        <button class="difficulty-btn active-difficulty" onclick="setDifficulty('Easy')">
+          Easy
+        </button>
+
+        <button class="difficulty-btn" onclick="setDifficulty('Medium')">
+          Medium
+        </button>
+
+        <button class="difficulty-btn" onclick="setDifficulty('Hard')">
+          Hard
+        </button>
+      </div>
+
+      <div class="quiz-card">
+        <div class="ege-task">
+          <p id="question"></p>
+
+          <div class="word-box">
+            <span id="base-word"></span>
+          </div>
+
+          <input
+            type="text"
+            id="answer-input"
+            placeholder="Введите ответ"
+          />
+
+          <div class="buttons">
+            <button class="btn" id="main-action-btn" onclick="checkTextAnswer()">
+              Проверить
+            </button>
+
+            <button class="btn secondary-btn" onclick="nextQuestion()">
+              Следующее
+            </button>
+          </div>
+
+          <p id="result"></p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+    </section>
+
+<section class="section" id="progress">
+  <h2>Твой прогресс</h2>
+
+  <div class="progress-box">
+    <h3>Общая тренировка</h3>
+    <p>Решено заданий: <span id="total">0</span></p>
+    <p>Правильных ответов: <span id="correct">0</span></p>
+    <p>Ошибок: <span id="wrong">0</span></p>
+  </div>
+
+  <div class="progress-box exam-progress-box">
+    <h3>Результаты экзамена ЕГЭ 19–29</h3>
+    <p>Последний результат: <span id="last-exam-result">—</span></p>
+    <p>Лучший результат: <span id="best-exam-result">—</span></p>
+  </div>
+</section>
+  </main>
+
+  <footer>
+    <p>Индивидуальный проект: обучающий сайт для подготовки к ЕГЭ по английскому языку</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
