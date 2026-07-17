@@ -1210,6 +1210,7 @@ const baseWordEl = document.getElementById("base-word");
 const resultEl = document.getElementById("result");
 const inputEl = document.getElementById("answer-input");
 const moduleInfoEl = document.getElementById("module-info");
+let currentFilteredQuestions = [];
 
 function selectModule(moduleName) {
   currentModule = moduleName;
@@ -1251,7 +1252,7 @@ function loadModuleInfo() {
 
 function loadQuestion() {
   const module = modules[currentModule];
-  const filteredQuestions =
+  const filteredQuestions =currentFilteredQuestions = filteredQuestions;
   module.questions.filter(
     (q) => q.level === currentDifficulty
   );
@@ -1307,7 +1308,7 @@ const q = filteredQuestions[currentQuestion];
 
 function checkTextAnswer() {
   const module = modules[currentModule];
-  const q = module.questions[currentQuestion];
+ const q = currentFilteredQuestions[currentQuestion];
   const userAnswer = inputEl.value.trim().toLowerCase();
 
   if (userAnswer === "") {
@@ -1419,11 +1420,12 @@ function showWeakTopic() {
   }
 }
 
-inputEl.addEventListener("keydown", function(event) {
-  if (event.key === "Enter") {
-    checkTextAnswer();
+inputEl.onkeydown = function (e) {
+  if (e.key === "Enter") {
+    e.preventDefault();
+    checkAnswer();
   }
-});
+};
 
 loadModuleInfo();
 loadQuestion();
@@ -1507,7 +1509,7 @@ function checkTextAnswer() {
   }
 
   const module = modules[currentModule];
-  const q = module.questions[currentQuestion];
+  const q = currentFilteredQuestions[currentQuestion];
 
   const userAnswer = inputEl.value.trim().toLowerCase();
 
