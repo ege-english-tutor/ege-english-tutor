@@ -1209,6 +1209,9 @@ const questionEl = document.getElementById("question");
 const baseWordEl = document.getElementById("base-word");
 const resultEl = document.getElementById("result");
 const inputEl = document.getElementById("answer-input");
+let filteredQuestions = [];
+let currentFilteredQuestions = [];
+let currentQuestion = 0;
 const moduleInfoEl = document.getElementById("module-info");
 let currentFilteredQuestions = [];
 
