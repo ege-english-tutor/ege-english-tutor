@@ -1310,7 +1310,6 @@ function checkTextAnswer() {
   const module = modules[currentModule];
  const q = currentFilteredQuestions[currentQuestion];
   const userAnswer = inputEl.value.trim().toLowerCase();
-
   if (userAnswer === "") {
     resultEl.innerHTML = `
       <div class="error-box">
