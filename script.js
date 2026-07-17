@@ -1213,7 +1213,6 @@ let filteredQuestions = [];
 let currentFilteredQuestions = [];
 let currentQuestion = 0;
 const moduleInfoEl = document.getElementById("module-info");
-let currentFilteredQuestions = [];
 
 function selectModule(moduleName) {
   currentModule = moduleName;
@@ -1255,10 +1254,12 @@ function loadModuleInfo() {
 
 function loadQuestion() {
   const module = modules[currentModule];
-  const filteredQuestions =currentFilteredQuestions = filteredQuestions;
-  module.questions.filter(
+
+  currentFilteredQuestions = module.questions.filter(
     (q) => q.level === currentDifficulty
   );
+
+  const filteredQuestions = currentFilteredQuestions;
 
 if (filteredQuestions.length === 0) {
   questionEl.innerHTML = `
@@ -1504,11 +1505,7 @@ function loadExamQuestion() {
   inputEl.value = "";
 }
 
-function checkTextAnswer() {
-  if (examMode) {
-    checkExamAnswer();
-    return;
-  }
+
 
   const module = modules[currentModule];
   const q = currentFilteredQuestions[currentQuestion];
