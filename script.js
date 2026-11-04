@@ -1211,7 +1211,7 @@ const resultEl = document.getElementById("result");
 const inputEl = document.getElementById("answer-input");
 let filteredQuestions = [];
 let currentFilteredQuestions = [];
-let currentQuestion = 0;
+// currentQuestion is declared above; keep a single shared index.
 const moduleInfoEl = document.getElementById("module-info");
 
 function selectModule(moduleName) {
