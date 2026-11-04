@@ -1363,6 +1363,16 @@ function checkTextAnswer() {
   showWeakTopic();
 }
 
+// Единая точка входа для кнопки и клавиши Enter.
+// В экзамене проверяем именно examQuestions, а не задание обычной тренировки.
+function checkAnswer() {
+  if (examMode) {
+    checkExamAnswer();
+  } else {
+    checkTextAnswer();
+  }
+}
+
 function nextQuestion() {
   const module = modules[currentModule];
 
