@@ -1517,6 +1517,7 @@ function loadExamQuestion() {
 
 
 
+function checkTextAnswer() {
   const module = modules[currentModule];
   const q = currentFilteredQuestions[currentQuestion];
 
